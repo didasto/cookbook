@@ -1,0 +1,12 @@
+#! /bin/bash
+
+mkdir -p .git/hooks;
+FILE=.git/hooks/pre-commit;
+touch ${FILE};
+
+echo "#! /bin/bash" > ${FILE}
+echo "./sail composer ide-helper;" >> ${FILE};
+echo "./sail composer csfix;" >> ${FILE};
+echo "./sail composer phpstan;" >> ${FILE};
+
+chmod +x ${FILE}

@@ -1,0 +1,3 @@
+#!/bin/bash
+./vendor/bin/sail down -t0 && \
+./vendor/bin/sail up -d;

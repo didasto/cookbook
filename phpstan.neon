@@ -1,0 +1,16 @@
+parameters:
+    paths:
+        - app
+        - config
+        - database
+        - lang
+        - resources
+        - storage
+        - tests
+    level: 8
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    excludePaths:
+        - app\Http\Middleware
+    ignoreErrors:
+        - '#PHPDoc tag @mixin contains unknown class Eloquent.#'

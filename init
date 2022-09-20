@@ -1,0 +1,12 @@
+#! /bin/bash
+
+cp .env.example .env;
+composer install;
+php artisan key:generate;
+
+php artisan sail:install;
+./start;
+./sail artisan migrate:fresh;
+
+./add_pre_commit_hook;
+./stop;
