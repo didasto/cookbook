@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Schema;
 return new class() extends Migration {
     public function up(): void
     {
-        Schema::create('rezeptes', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name', 100)->unique();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('rezeptes');
+        Schema::dropIfExists('categories');
     }
 };

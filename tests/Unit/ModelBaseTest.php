@@ -75,6 +75,7 @@ class ModelBaseTest extends TestCase
     {
         foreach ($this->models as $model) {
             $modelInstance = $this->createModel($model);
+            dump($modelInstance->getKey());
             $this->assertNotEmpty($modelInstance->getKey(), $modelInstance::class.' dont have a primary key');
         }
     }

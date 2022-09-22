@@ -7,7 +7,7 @@ $finder = PhpCsFixer\Finder::create()
     ->exclude('vendor')
     ->exclude('storage')
     ->exclude('bootstrap')
-    ->in(__DIR__ . '/../');
+    ->in(__DIR__.'/../');
 
 return (new Config())->setRules(
     [
@@ -21,5 +21,8 @@ return (new Config())->setRules(
         '@PhpCsFixer' => true,
         'multiline_whitespace_before_semicolons' => false,
         'return_assignment' => false,
+        'new_with_braces' => false,
+        'single_line_comment_style' => false,
+        'phpdoc_comment' => false,
     ]
 )->setFinder($finder);

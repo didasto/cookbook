@@ -14,3 +14,4 @@ parameters:
         - app\Http\Middleware
     ignoreErrors:
         - '#PHPDoc tag @mixin contains unknown class Eloquent.#'
+        - '#Call to an undefined method [A-Za-z\\]+|Illuminate\Database\Eloquent\Builder::chunk()#'
