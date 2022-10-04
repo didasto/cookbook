@@ -14,8 +14,8 @@
         "spatie/laravel-model-info": "^1.4"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9.1",
         "barryvdh/laravel-ide-helper": "^2.12",
+        "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^3.10",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.15",
@@ -24,7 +24,7 @@
         "phpstan/phpstan": "^1.8",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0",
-        "spatie/laravel-route-attributes": "^1.11"
+        "spatie/laravel-route-attributes": "^1.14"
     },
     "autoload": {
         "psr-4": {

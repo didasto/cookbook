@@ -120,15 +120,13 @@ class ModelBaseTest extends TestCase
         return $out;
     }
 
-    private function createModel(mixed $model): Model
+    private function createModel(string $model): Model
     {
         $modelFactory = preg_replace('/(App\\\\Models\\\\)/', 'Database\Factories\\', $model).'Factory';
 
         /** @var Factory<Model> $modelFactory */
-        $modelFactory = new $modelFactory();
-
         /** @var Model $freshModel */
-        $freshModel = $modelFactory->create();
+        $freshModel = $modelFactory::new()->count(1)->create()->first();
 
         return $freshModel;
     }

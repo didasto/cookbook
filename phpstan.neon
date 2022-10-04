@@ -1,11 +1,7 @@
 parameters:
     paths:
         - app
-        - config
         - database
-        - lang
-        - resources
-        - storage
         - tests
     level: 8
     inferPrivatePropertyTypeFromConstructor: true

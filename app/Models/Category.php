@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -10,16 +12,20 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  *
  * @property int $id
  * @property string $name
- * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category query()
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
- * @mixin \Eloquent
+ * @method static Builder newModelQuery()
+ * @method static Builder newQuery()
+ * @method static Builder query()
+ * @method static Category whereId($value)
+ * @method static Category[]|null whereName($value)
+ * @mixin Eloquent
  */
 class Category extends Model
 {
     public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+    ];
 
     public function recipes(): HasMany
     {
